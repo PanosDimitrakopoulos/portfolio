@@ -5136,3 +5136,31 @@ a img {
     margin: 0;
     color: #fff
 }
+
+/* ── Hover image swap ── */
+.img-hover-wrap {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.img-hover-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.img-hover-wrap .img-secondary {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.45s ease-in-out;
+}
+
+.img-hover-wrap:hover .img-secondary {
+  opacity: 1;
+}
